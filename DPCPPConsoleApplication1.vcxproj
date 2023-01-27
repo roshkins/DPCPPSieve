@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{adc69f6e-15ff-4d3a-958d-ff8fdbd91c0e}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DPCPPConsoleApplication1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Intel(R) oneAPI DPC++ Compiler 2023</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelIPP1A>true</UseIntelIPP1A>
+    <UseInteloneTBB>true</UseInteloneTBB>
+    <UseInteloneMKL>Parallel</UseInteloneMKL>
+    <UseILP64Interfaces1A>true</UseILP64Interfaces1A>
+    <EnableMKLOpenMPOffloadToGPU>true</EnableMKLOpenMPOffloadToGPU>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel(R) oneAPI DPC++ Compiler 2023</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <SYCLWarningLevel>Level3</SYCLWarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>Default</LanguageStandard>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <SYCLOptimization>MaxSpeed</SYCLOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <SYCLWarningLevel>Level3</SYCLWarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DPCPPConsoleApplication1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\accessor.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\aliases.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\aspects.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\atomic.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\atomic_fence.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\atomic_ref.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\backend.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\backend_types.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\bit_cast.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\buffer.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\builtins.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\builtins_esimd.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\context.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\define_vendors.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\device.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\device_event.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\device_selector.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\event.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\exception.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\exception_list.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\feature_test.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\functional.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\group.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\group_algorithm.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\group_local_memory.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\half_type.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\handler.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\h_item.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\id.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\image.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\interop_handle.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\interop_handler.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\item.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\kernel.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\kernel_bundle.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\kernel_bundle_enums.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\kernel_handler.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\known_identity.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\marray.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\memory_enums.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\multi_ptr.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\nd_item.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\nd_range.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\pipes.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\platform.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\pointers.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\property_list.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\property_list_conversion.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\queue.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\range.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\reduction.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\sampler.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\specialization_id.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\stl.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\stream.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\sub_group.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\sycl.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\sycl_span.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\types.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\usm.hpp" />
+    <ClInclude Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\version.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\feature_test.hpp.in" />
+    <None Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\swizzles.def" />
+    <None Include="C:\Program Files (x86)\Intel\oneAPI\compiler\2023.0.0\windows\include\sycl\version.hpp.in" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
